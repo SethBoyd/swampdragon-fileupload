@@ -8,7 +8,7 @@ class FileDeserializer(BaseFieldDeserializer):
     def __call__(self, model_instance, key, val):
         if not val:
             return
-        if isinstance(val, str):
+        if isinstance(val, basestring):
             return
         if isinstance(val, list):
             val = val[0]
